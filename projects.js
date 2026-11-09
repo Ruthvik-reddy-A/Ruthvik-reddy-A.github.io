@@ -1,4 +1,4 @@
-// Portfolio facts and figures are grounded in supplied reports. See PORTFOLIO.md and IMAGES.md.
+// Facts and figures: supplied reports and confirmed resumes. See PORTFOLIO.md.
 const projects = [
   {
     "title": "Folded-cascode amplifier",
@@ -63,7 +63,10 @@ const projects = [
         "width": 1358,
         "height": 656
       }
-    ]
+    ],
+    "situation": "A high-gain CMOS amplifier must also bias correctly and remain stable when its output stage drives a load. This project combines a folded-cascode gain stage with a Class-AB buffer.",
+    "task": "Size and bias the transistor-level design, then evaluate gain, stability, and load-dependent bandwidth.",
+    "outcome": "Designed and simulated a folded-cascode/Class-AB amplifier with approximately 70 dB gain and 57.5° phase margin; a separate 1 pF simulation reached 169 MHz unity-gain frequency."
   },
   {
     "title": "2.3 V LDO regulator",
@@ -128,7 +131,10 @@ const projects = [
         "width": 1548,
         "height": 587
       }
-    ]
+    ],
+    "situation": "The load on a regulator changes while its output must stay close to the required voltage. This project evaluates a 2.3 V LDO from a 2.5 V supply across a 0.1–50 mA load range.",
+    "task": "Build the OTA-controlled feedback loop and distinguish steady-state regulation from the response to a sudden load change.",
+    "outcome": "Held the simulated DC output within an 8 mV span across four load conditions by designing an OTA-driven PMOS regulator and evaluating its feedback response."
   },
   {
     "title": "Telescopic-cascode amplifier",
@@ -193,7 +199,10 @@ const projects = [
         "width": 1494,
         "height": 717
       }
-    ]
+    ],
+    "situation": "A telescopic stack depends on available voltage headroom and the common-mode operating point. The project examines the differential amplifier together with its current reference and bias circuitry.",
+    "task": "Establish the transistor operating points and characterize gain, common-mode behavior, supply rejection, and transient response.",
+    "outcome": "Characterized a telescopic-cascode amplifier at 3 V supply and 1.5 V common mode, reporting 90.21 dB CMRR, 34.07 dB PSRR+, and 46.75 dB PSRR− at the documented readings."
   },
   {
     "id": "constant-gm",
@@ -238,6 +247,10 @@ const projects = [
       [
         "Temperature sweep",
         "−20 to 85 °C"
+      ],
+      [
+        "Design 1 gm variation",
+        "4.8%"
       ]
     ],
     "images": [
@@ -257,7 +270,10 @@ const projects = [
         "width": 1024,
         "height": 706
       }
-    ]
+    ],
+    "situation": "Analog stages need a usable bias reference as supply and temperature change. This study compares three CMOS reference circuits rather than relying only on a nominal bias point.",
+    "task": "Choose device sizing and resistors, include start-up circuitry, and compare branch currents and transconductance across the specified sweeps.",
+    "outcome": "Designed three reference topologies; Design 1 produced approximately 10.1 µA at 2.5 V and a reported 4.8% endpoint gm variation over −20 to 85 °C."
   },
   {
     "id": "fp8-apb",
@@ -322,7 +338,10 @@ const projects = [
         "width": 1705,
         "height": 925
       }
-    ]
+    ],
+    "situation": "The team’s FP8 matrix engine needed a processor-facing interface for configuration, launch, completion, and exception reporting. Ruthvik’s assigned contribution was the APB interface and register map.",
+    "task": "Wrap the existing engine with a 16-bit APB slave and verify register access, control sequencing, and result/status readback.",
+    "outcome": "Implemented the accelerator’s 16-bit APB interface and register map, with 320 output entries checked and 70 protocol checks in the reported Part 4 simulation."
   },
   {
     "id": "pipelined-mips",
@@ -368,6 +387,10 @@ const projects = [
       [
         "Base instructions",
         "8 checked"
+      ],
+      [
+        "Directed cycle reduction",
+        "37.5%"
       ]
     ],
     "images": [
@@ -387,7 +410,10 @@ const projects = [
         "width": 1800,
         "height": 811
       }
-    ]
+    ],
+    "situation": "Overlapping instruction execution introduces dependencies and wrong-path instructions. The project extends a provided processor into a five-stage pipeline while retaining correct instruction behavior.",
+    "task": "Develop forwarding, load-use stalls, and BEQ flushing, and verify these mechanisms with directed tests and the base instruction regression.",
+    "outcome": "Reduced a six-instruction directed sequence from 16 to 10 cycles with forwarding—a 37.5% cycle-count reduction for that sequence—and retained the eight-instruction base regression."
   },
   {
     "title": "GCN accelerator",
@@ -404,7 +430,16 @@ const projects = [
     "file": "03-Graph-Accelerator",
     "course": "EEE 525 · VLSI Design",
     "term": "Spring 2026",
-    "results": [],
+    "results": [
+      [
+        "Validation stages",
+        "3"
+      ],
+      [
+        "Class outputs",
+        "3"
+      ]
+    ],
     "id": "gcn-accelerator",
     "kind": "Academic design",
     "role": "GCN datapath and controller design, simulation, synthesis, and physical implementation documented in the lab report.",
@@ -440,7 +475,10 @@ const projects = [
         "width": 1600,
         "height": 963
       }
-    ]
+    ],
+    "situation": "Graph-node classification combines dense feature transformation, sparse neighbor aggregation, and class selection. The project maps those phases into RTL and follows the design through physical implementation.",
+    "task": "Coordinate the datapath with an FSM, reproduce the reference classifications, and carry the design through synthesis and place-and-route.",
+    "outcome": "Reproduced reference classifications at three implementation stages—RTL, post-synthesis, and post-route—using the same testbench through the ASIC flow."
   },
   {
     "title": "32 nm four-bit CMOS adder",
@@ -513,7 +551,10 @@ const projects = [
         "width": 1272,
         "height": 462
       }
-    ]
+    ],
+    "situation": "A fast schematic is only part of a custom digital circuit: routing and device parasitics affect the extracted result. This project compares both views of a 32 nm, four-bit adder.",
+    "task": "Size the critical carry path, implement the layout, run DRC/LVS, and characterize delay and power after extraction.",
+    "outcome": "Implemented a four-bit adder occupying 40.083 µm², with 277 ps extracted worst-case delay and 47.3 µW average power; compared it with the 152 ps schematic result."
   },
   {
     "id": "async-fifo",
@@ -578,7 +619,10 @@ const projects = [
         "width": 1618,
         "height": 806
       }
-    ]
+    ],
+    "situation": "Different read and write clocks stress FIFO boundary behavior. A second circuit combines even and odd streams, where a missing required entry must not advance the output sequence.",
+    "task": "Verify flags and ordering, choose queue depth from the tested traffic pattern, and correct the alternating read-state behavior.",
+    "outcome": "Verified a 16-entry asynchronous FIFO and two 40-entry alternating-stream queues, correcting parity advancement so the reader waits for the required queue."
   },
   {
     "id": "fifo-dpi-sva",
@@ -614,19 +658,26 @@ const projects = [
     "source": "ADDV Lab 4 Parts 1–4 updated report, sections 2 and 4.",
     "results": [
       [
-        "Normal reads checked",
-        "80"
+        "Writes / reads",
+        "80 / 80"
+      ],
+      [
+        "Checker errors",
+        "0"
       ],
       [
         "Stream assertions",
         "11"
       ],
       [
-        "Injected fault caught",
-        "145 ns"
+        "Fault-detection interval",
+        "5 ns"
       ]
     ],
-    "images": []
+    "images": [],
+    "situation": "A checker must recognize correct transactions and also demonstrate that it catches errors. This project pairs a C queue model with SystemVerilog assertions and an intentional fault experiment.",
+    "task": "Compare accepted FIFO operations through DPI-C, check stream-control properties, and test the routing assertion with a deliberate bad control signal.",
+    "outcome": "Checked 80 writes and 80 reads with zero errors in the normal DPI run; an intentional fault injected at 140 ns was detected at 145 ns, a 5 ns interval in that simulation."
   },
   {
     "title": "VeriChip verification",
@@ -643,7 +694,12 @@ const projects = [
     "file": "05-VeriChip",
     "course": "Digital Verification and Testing",
     "term": "Spring 2026",
-    "results": [],
+    "results": [
+      [
+        "Controller states",
+        "4"
+      ]
+    ],
     "id": "verichip",
     "kind": "Collaborative verification",
     "role": "SystemVerilog verification work; the ALU test plan was prepared with Akshith Alwala.",
@@ -661,7 +717,10 @@ const projects = [
     "validation": "The illustrated brief shows selected ALU and state-machine checks and their expected values. It serves as a readable verification-plan example alongside the reviewed testbench.",
     "tradeoff": "Expected values in a test plan are not measured pass counts or achieved coverage. No coverage percentage or bug count is inferred from the planning tables.",
     "source": "ALU Test plan p. 6; SM_tstplan p. 3; reviewed SystemVerilog testbench; approved VeriChip brief.",
-    "images": []
+    "images": [],
+    "situation": "The VeriChip ALU and controller have arithmetic, invalid-command, and error-state corner cases. A verification plan establishes the expected behavior before stimulus and checkers are applied.",
+    "task": "Translate the ALU and state-machine scenarios into self-checking directed and constrained-random tests, assertions, and coverage observations.",
+    "outcome": "Built a self-checking SystemVerilog verification workflow for ALU operations and four controller states, supported by directed plans, assertions, cross-coverage, and VCS/Verdi debugging."
   },
   {
     "id": "fpga-clock",
@@ -704,7 +763,10 @@ const projects = [
         "width": 1280,
         "height": 527
       }
-    ]
+    ],
+    "situation": "A digital clock must update time and recognize an alarm match while supporting reset and time-setting inputs. The team used a Verilog model and a simulation testbench to explore this sequential behavior.",
+    "task": "Contribute the Verilog implementation and documentation, then inspect the time counters and alarm signal in ModelSim.",
+    "outcome": "Implemented clock and alarm logic in Verilog and documented a ModelSim example in which the alarm asserts at the programmed 10:20 match."
   },
   {
     "id": "buck-converter",
@@ -763,7 +825,10 @@ const projects = [
         "width": 1800,
         "height": 832
       }
-    ]
+    ],
+    "situation": "A charging-oriented power-conversion prototype needs rectification, smoothing, and a controlled lower DC output. The project combines circuit calculations, simulation, and hardware observations.",
+    "task": "Contribute component calculations, LTspice/Simulink evaluation, hardware work, and documentation as part of the team.",
+    "outcome": "Connected rectifier and buck-converter analysis with LTspice/Simulink waveforms and hardware observations, including documented no-load and full-load regulation calculations."
   },
   {
     "id": "traffic-priority",
@@ -814,7 +879,10 @@ const projects = [
         "width": 1280,
         "height": 678
       }
-    ]
+    ],
+    "situation": "The prototype explores how a vehicle request can change a traffic signal. An IR emitter represents the approaching emergency vehicle, with receivers connected to the signal-control system.",
+    "task": "Implement the Arduino control and contribute the report and presentation, working with the team’s LabVIEW and hardware integration.",
+    "outcome": "Demonstrated IR-triggered signal selection on an Arduino/LabVIEW prototype: the selected direction turns green while the other directions turn red."
   },
   {
     "id": "gas-detection",
@@ -857,7 +925,10 @@ const projects = [
         "width": 1280,
         "height": 720
       }
-    ]
+    ],
+    "situation": "A gas-detection input must be translated into a clear alarm state and output controls. The academic project explores that path with an AT89S52, controller code, and circuit simulation.",
+    "task": "Contribute to the team’s microcontroller implementation and documented normal/alarm-state behavior using the supplied 8051 and Proteus materials.",
+    "outcome": "Documented normal and alarm-state behavior for an 8051-based controller, connecting sensor input to display, LED/buzzer alerts, and fan activation."
   },
   {
     "id": "smart-grid",
@@ -900,7 +971,10 @@ const projects = [
         "width": 635,
         "height": 477
       }
-    ]
+    ],
+    "situation": "Energy consumption and generation values can be combined into a net-value calculation and displayed remotely. This demonstrator uses substituted firmware inputs to exercise that calculation and cloud connection.",
+    "task": "Work with the team to implement the calculation on an ESP8266 and display the result through Arduino IoT Cloud.",
+    "outcome": "Demonstrated cloud-connected net-energy billing calculations from example consumption and generation inputs using an ESP8266 and a fixed tariff."
   },
   {
     "id": "speech-analysis",
@@ -947,7 +1021,10 @@ const projects = [
         "64 points"
       ]
     ],
-    "images": []
+    "images": [],
+    "situation": "A single spectrum cannot show when different frequency components occur in a speech sample. This study compares the audio waveform and FFT view with a time-frequency representation.",
+    "task": "Use MATLAB to read the sample, calculate the FFT, and inspect local frequency content using the supplied STFT configuration.",
+    "outcome": "Produced waveform and spectrogram views using a 64-sample Hamming window, 32-sample overlap, and 64-point transform, making the analysis configuration explicit."
   },
   {
     "id": "load-flow",
@@ -981,7 +1058,10 @@ const projects = [
     "tradeoff": "The study emphasizes algorithm structure and convergence tradeoffs. Its Gauss–Seidel approach is most useful as a small-system learning example; a network benchmark would be a separate extension.",
     "source": "POWER SYSTEM ANALYSIS FISAC.pdf in gptz/PSA.",
     "results": [],
-    "images": []
+    "images": [],
+    "situation": "Load-flow analysis estimates steady-state bus voltages and line power from specified network quantities. This case study develops the Gauss–Seidel process and its convergence considerations.",
+    "task": "Co-author the bus-type explanation, voltage-update procedure, stopping condition, and discussion of the method’s limitations.",
+    "outcome": "Documented an iterative load-flow procedure from flat-start initialization to convergence checks and line-power calculations, distinguishing slack, PV, and PQ bus specifications."
   },
   {
     "id": "audio-encryption",
@@ -1015,6 +1095,9 @@ const projects = [
     "tradeoff": "This is an educational algorithm study. The signal illustrations explain the workflow; cryptographic validation and quantitative recovery analysis sit beyond its demonstrated scope.",
     "source": "REAL TIME APPLICATION.docx in gptz.zip, case-study and team sections.",
     "results": [],
-    "images": []
+    "images": [],
+    "situation": "An audio signal provides a visual example of an encryption/decryption sequence. This team study discusses symmetric and asymmetric concepts with RSA as its reference algorithm.",
+    "task": "Contribute as a team member to the conceptual study and documented MATLAB signal workflow.",
+    "outcome": "Presented original, encrypted, and recovered signal views in an educational MATLAB study, with the scope limited to the documented workflow rather than a security benchmark."
   }
 ];

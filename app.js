@@ -30,6 +30,7 @@ function makeCard(project, index) {
     ${project.images?.length ? `<div class="card-visual"><img src="${project.images[0].src}" alt="${escapeHtml(project.images[0].alt)}" width="${project.images[0].width}" height="${project.images[0].height}" loading="lazy"><span class="visual-label">${escapeHtml(project.label)}</span><span class="visual-count">${project.images.length} figure${project.images.length > 1 ? 's' : ''} ↗</span></div>` : diagram(project,true)}
     <div class="card-body"><div class="card-meta"><span>${escapeHtml(project.term)}</span><span>${project.file ? 'PDF brief' : escapeHtml(project.kind)}</span></div>
     <h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p>
+    ${project.results.length ? `<dl class="card-metrics">${project.results.slice(0,2).map(([label,value])=>`<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>` : ''}
     <div class="card-tags">${project.tags.slice(0,3).map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>
     <div class="card-bottom"><span>Read case study</span><span aria-hidden="true">↗</span></div></div></a>`;
   return card;
@@ -83,15 +84,15 @@ function renderCaseStudy(project) {
   const related = projects.filter(p => p.id !== project.id && p.category === project.category).slice(0,2);
   casePage.innerHTML = `<div class="case-tools"><a href="#projects" class="back-link">← Project library</a><button type="button" class="text-button" id="copy-project">Copy project link ↗</button></div>
     <div class="case-hero"><p class="eyebrow accent">${escapeHtml(project.label)} <span aria-hidden="true">/</span> ${escapeHtml(project.term)}</p>
-    <h2 id="case-title" tabindex="-1">${escapeHtml(project.title)}</h2><p class="case-lead">${escapeHtml(project.summary)}</p>
+    <h2 id="case-title" tabindex="-1">${escapeHtml(project.title)}</h2><p class="case-lead">${escapeHtml(project.outcome || project.summary)}</p>
     <div class="case-meta"><span>${escapeHtml(project.course)}</span><span>${escapeHtml(project.kind)}</span></div></div>
     ${gallery(project)}
     ${project.results.length ? `<dl class="result-grid">${project.results.map(([label,value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>` : ''}
-    <div class="case-layout"><aside class="case-index" aria-label="Case study sections"><span class="eyebrow">IN THIS PROJECT</span><button data-section="case-overview">01 / The problem</button><button data-section="case-approach">02 / Design approach</button><button data-section="case-results">03 / Evaluation</button><button data-section="case-reflection">04 / Scope & context</button>${project.file ? '<button data-section="case-evidence">05 / Project brief</button>' : ''}</aside>
+    <div class="case-layout"><aside class="case-index" aria-label="Case study sections"><span class="eyebrow">PROJECT STORY</span><button data-section="case-overview">01 / Situation & task</button><button data-section="case-approach">02 / Actions</button><button data-section="case-results">03 / Results</button><button data-section="case-reflection">04 / Scope & context</button>${project.file ? '<button data-section="case-evidence">05 / Project brief</button>' : ''}</aside>
     <div class="case-narrative">
-    <section id="case-overview" class="story-section"><p class="section-number">01 / THE PROBLEM</p><h3>${escapeHtml(project.question)}</h3><div class="contribution"><h4>My contribution</h4><p>${escapeHtml(project.role)}</p></div></section>
-    <section id="case-approach" class="story-section"><p class="section-number">02 / DESIGN APPROACH</p><h3>How the work came together.</h3><ol class="approach-list">${project.approach.map(item => `<li><p>${escapeHtml(item)}</p></li>`).join('')}</ol></section>
-    <section id="case-results" class="story-section"><p class="section-number">03 / EVALUATION</p><h3>What the results show.</h3><p>${escapeHtml(project.validation)}</p></section>
+    <section id="case-overview" class="story-section"><p class="section-number">01 / SITUATION & TASK</p><h3>${escapeHtml(project.question)}</h3><p class="situation-copy">${escapeHtml(project.situation)}</p><div class="task-callout"><span class="eyebrow accent">THE TASK</span><p>${escapeHtml(project.task)}</p></div><div class="contribution"><h4>My contribution</h4><p>${escapeHtml(project.role)}</p></div></section>
+    <section id="case-approach" class="story-section"><p class="section-number">02 / ACTIONS</p><h3>From the task to implementation.</h3><ol class="approach-list">${project.approach.map(item => `<li><p>${escapeHtml(item)}</p></li>`).join('')}</ol></section>
+    <section id="case-results" class="story-section"><p class="section-number">03 / RESULTS</p><h3>What the work demonstrated.</h3><p>${escapeHtml(project.validation)}</p></section>
     <section id="case-reflection" class="story-section"><p class="section-number">04 / SCOPE & CONTEXT</p><h3>The result, in context.</h3><p>${escapeHtml(project.tradeoff)}</p><h4 class="skills-heading">Tools & concepts</h4><div class="toolkit">${project.tags.map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div></section>
     ${project.file ? `<section id="case-evidence" class="story-section evidence"><p class="section-number">05 / PROJECT BRIEF</p><h3>A closer look at the evidence.</h3><p>The one-page brief brings the design, figures, and source references together.</p><a href="${project.file}.pdf" class="button primary" download>Download illustrated brief ↓ <span>PDF</span></a><details><summary>Preview the complete brief <span aria-hidden="true">＋</span></summary><img class="brief-image" src="${project.file}.webp" alt="${escapeHtml(project.title)} illustrated project brief" loading="lazy" width="980" height="1268"></details></section>` : ''}
     <div class="source-note"><span class="eyebrow">SOURCE MATERIAL</span><p>${escapeHtml(project.source)}</p></div>
@@ -123,7 +124,7 @@ function showPage() {
   if(imageViewer.open) imageViewer.close();
   const requested = location.hash.slice(1) || 'about';
   const project = requested.startsWith('project/') ? projects.find(p=>p.id === requested.slice(8)) : null;
-  let page=project ? 'case-study' : ['about','projects','background','contact'].includes(requested) ? requested : 'projects';
+  let page=project ? 'case-study' : ['about','projects','background','resumes','contact'].includes(requested) ? requested : 'projects';
   if (lastRoute === 'projects') libraryScroll=window.scrollY;
   if(project) renderCaseStudy(project);
   document.querySelectorAll('.page').forEach(section=>{ section.hidden = section.id !== page; });
@@ -163,6 +164,8 @@ document.querySelector('.skip').addEventListener('click', event => {
   main.scrollIntoView({block: 'start'});
 });
 document.querySelector('#selected-projects').replaceChildren(...projects.slice(0,2).map(makeCard));
+
+document.querySelector('#resume-list').innerHTML=resumes.map(resume=>`<article class="resume-card"><div class="resume-mark" aria-hidden="true">CV<span>PDF</span></div><div><p class="eyebrow accent">${escapeHtml(resume.focus)}</p><h3>${escapeHtml(resume.title)}</h3><p>${escapeHtml(resume.description)}</p><div class="card-tags">${resume.tags.map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div><div class="resume-actions"><a class="button primary" href="${escapeHtml(resume.file)}" download>Download resume ↓</a><a class="text-link" href="${escapeHtml(resume.file)}" target="_blank" rel="noopener noreferrer">View PDF ↗</a></div></div></article>`).join('');
 document.querySelector('#year').textContent=new Date().getFullYear();
 document.querySelector('#total-projects').textContent=projects.length;
 renderProjects();showPage();
