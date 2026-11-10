@@ -1,4 +1,17 @@
-# Portfolio structure and editing map
+# Repository-first portfolio
+
+The shareable entry point is [this GitHub repository](https://github.com/Ruthvik-reddy-A/Ruthvik-reddy-A.github.io). The README introduces the work; PROJECT-INDEX.md links all 19 three-page case studies. Project-*.pdf files and the complete ZIP can be read or downloaded directly. Netlify setup was stopped at the owner’s request; the configuration file is unused.
+
+## PDF organization
+
+- `Project-01` through `Project-04`: analog IC design.
+- Remaining case studies: digital/physical design, verification, embedded systems, power, and signal studies, grouped in PROJECT-INDEX.md.
+- `Ruthvik-Reddy-Project-Case-Studies.zip`: all 19 detailed PDFs.
+- Existing `01-LDO.pdf` through `05-VeriChip.pdf`: earlier short briefs, retained separately.
+
+Update both the individual PDF and ZIP when revising a case study. Keep source citations and test conditions alongside any numerical results.
+
+# Website source and editing map
 
 ## Visitor journey
 

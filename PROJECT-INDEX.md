@@ -1,25 +1,48 @@
-# Project index
+# Detailed project library
 
-Order follows the portfolio’s default Recommended order. A dash means no matching public repository was verified during the 9 November 2026 review; it does not mean the design is missing from the portfolio.
+Each PDF is **three pages**: problem and contribution; design and method; results, limitations, and proposed next steps. Figures come from the supplied project material. Metrics retain their documented conditions, and team roles are identified.
 
-| # | Case study | Area | Public repository |
-|---|---|---|---|
-| 1 | [Folded-cascode amplifier](https://ruthvik-reddy-a.github.io/#project/folded-cascode) | analog | — |
-| 2 | [2.3 V LDO regulator](https://ruthvik-reddy-a.github.io/#project/ldo-regulator) | analog | [Repository](https://github.com/Ruthvik-reddy-A/Low-Dropout-Regulator-LDO-) |
-| 3 | [Telescopic-cascode amplifier](https://ruthvik-reddy-a.github.io/#project/telescopic-cascode) | analog | — |
-| 4 | [CMOS constant-gm current references](https://ruthvik-reddy-a.github.io/#project/constant-gm) | analog | — |
-| 5 | [APB interface for an FP8 accelerator](https://ruthvik-reddy-a.github.io/#project/fp8-apb) | digital | — |
-| 6 | [Five-stage pipelined MIPS processor](https://ruthvik-reddy-a.github.io/#project/pipelined-mips) | digital | — |
-| 7 | [GCN accelerator](https://ruthvik-reddy-a.github.io/#project/gcn-accelerator) | digital | — |
-| 8 | [32 nm four-bit CMOS adder](https://ruthvik-reddy-a.github.io/#project/cmos-adder) | digital | — |
-| 9 | [Asynchronous FIFO & alternating streams](https://ruthvik-reddy-a.github.io/#project/async-fifo) | verification | — |
-| 10 | [FIFO checking with DPI-C & assertions](https://ruthvik-reddy-a.github.io/#project/fifo-dpi-sva) | verification | — |
-| 11 | [VeriChip verification](https://ruthvik-reddy-a.github.io/#project/verichip) | verification | — |
-| 12 | [Verilog digital clock & alarm](https://ruthvik-reddy-a.github.io/#project/fpga-clock) | digital | — |
-| 13 | [Rectifier-fed buck converter prototype](https://ruthvik-reddy-a.github.io/#project/buck-converter) | power | [Repository](https://github.com/Ruthvik-reddy-A/Rectifier-based-buck-converter-prototype-for-charging-applications) |
-| 14 | [Emergency-vehicle traffic signal prototype](https://ruthvik-reddy-a.github.io/#project/traffic-priority) | embedded | [Repository](https://github.com/Ruthvik-reddy-A/Emergency-vehicle-traffic-clearing-system-using-LABVIEW-and-Arduino) |
-| 15 | [8051 gas-leak detection & alerting](https://ruthvik-reddy-a.github.io/#project/gas-detection) | embedded | [Repository](https://github.com/Ruthvik-reddy-A/LPG-Gas-leakage-detector-using-8051-Microcontroller) |
-| 16 | [IoT energy-billing demonstrator](https://ruthvik-reddy-a.github.io/#project/smart-grid) | embedded | [Repository](https://github.com/Ruthvik-reddy-A/IoT-Based-Smart-grid-along-with-auto-billing-) |
-| 17 | [Speech analysis with FFT & STFT](https://ruthvik-reddy-a.github.io/#project/speech-analysis) | signal | [Repository](https://github.com/Ruthvik-reddy-A/Speech-Signal-Processing-DSP) |
-| 18 | [Gauss–Seidel load-flow study](https://ruthvik-reddy-a.github.io/#project/load-flow) | power | — |
-| 19 | [Audio encryption/decryption study](https://ruthvik-reddy-a.github.io/#project/audio-encryption) | signal | — |
+[Download all 19 PDFs](Ruthvik-Reddy-Project-Case-Studies.zip) · [Back to portfolio](README.md)
+
+## Analog IC design
+
+| Project | Detailed case study | Project files |
+|---|---|---|
+| Folded-cascode amplifier | [Read 3-page PDF](Project-01-folded-cascode.pdf) | Included evidence in PDF |
+| 2.3 V LDO regulator | [Read 3-page PDF](Project-02-ldo-regulator.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Low-Dropout-Regulator-LDO-) |
+| Telescopic-cascode amplifier | [Read 3-page PDF](Project-03-telescopic-cascode.pdf) | Included evidence in PDF |
+| CMOS constant-gm current references | [Read 3-page PDF](Project-04-constant-gm.pdf) | Included evidence in PDF |
+
+## Digital and physical design
+
+| Project | Detailed case study | Project files |
+|---|---|---|
+| 32 nm four-bit CMOS adder | [Read 3-page PDF](Project-08-cmos-adder.pdf) | Included evidence in PDF |
+| GCN accelerator | [Read 3-page PDF](Project-07-gcn-accelerator.pdf) | Included evidence in PDF |
+| APB interface for an FP8 accelerator | [Read 3-page PDF](Project-05-fp8-apb.pdf) | Included evidence in PDF |
+| Five-stage pipelined MIPS processor | [Read 3-page PDF](Project-06-pipelined-mips.pdf) | Included evidence in PDF |
+| Verilog digital clock & alarm | [Read 3-page PDF](Project-12-fpga-clock.pdf) | Included evidence in PDF |
+
+## Verification
+
+| Project | Detailed case study | Project files |
+|---|---|---|
+| FIFO checking with DPI-C & assertions | [Read 3-page PDF](Project-10-fifo-dpi-sva.pdf) | Included evidence in PDF |
+| Asynchronous FIFO & alternating streams | [Read 3-page PDF](Project-09-async-fifo.pdf) | Included evidence in PDF |
+| VeriChip verification | [Read 3-page PDF](Project-11-verichip.pdf) | Included evidence in PDF |
+
+## Earlier embedded, power, and signal projects
+
+| Project | Detailed case study | Project files |
+|---|---|---|
+| Rectifier-fed buck converter prototype | [Read 3-page PDF](Project-13-buck-converter.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Rectifier-based-buck-converter-prototype-for-charging-applications) |
+| Emergency-vehicle traffic signal prototype | [Read 3-page PDF](Project-14-traffic-priority.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Emergency-vehicle-traffic-clearing-system-using-LABVIEW-and-Arduino) |
+| 8051 gas-leak detection & alerting | [Read 3-page PDF](Project-15-gas-detection.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/LPG-Gas-leakage-detector-using-8051-Microcontroller) |
+| IoT energy-billing demonstrator | [Read 3-page PDF](Project-16-smart-grid.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/IoT-Based-Smart-grid-along-with-auto-billing-) |
+| Speech analysis with FFT & STFT | [Read 3-page PDF](Project-17-speech-analysis.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Speech-Signal-Processing-DSP) |
+| Gauss–Seidel load-flow study | [Read 3-page PDF](Project-18-load-flow.pdf) | Included evidence in PDF |
+| Audio encryption/decryption study | [Read 3-page PDF](Project-19-audio-encryption.pdf) | Included evidence in PDF |
+
+## Reading the evidence
+
+These are portfolio case studies prepared from supplied reports and verified descriptions, not replacements for the original lab reports. A conceptual workflow diagram is labelled as such. Simulation outcomes, prototype observations, planned checks, and suggested extensions are distinguished. Click a figure in a PDF to view the corresponding source image on GitHub.
