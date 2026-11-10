@@ -4,28 +4,30 @@
 
 I am pursuing an MS in Electrical Engineering at Arizona State University. My primary interests are analog and mixed-signal IC design, supported by project work in custom CMOS circuits, RTL, physical implementation, and verification.
 
-**[Explore all 19 project PDFs](PROJECT-INDEX.md)** · **[Download the complete PDF collection](Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
+**[Explore all 19 project PDFs](docs/PROJECT-INDEX.md)** · **[Download the complete PDF collection](downloads/Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](downloads/resumes/Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
 
-This repository is the portfolio's main entry point. Each detailed project PDF is three pages and covers the problem, my contribution, implementation, evidence, and limitations. No separate website or account is needed to browse the public repository and its files.
+**[Open the portfolio website](https://ruthvik-reddy-a.github.io/)**
+
+The website and this repository provide two ways to explore the work. Each detailed project PDF is three pages and covers the problem, my contribution, implementation, evidence, and limitations. No separate website or account is needed to browse the public repository and its files.
 
 ## Start with my analog work
 
 | Project | Engineering focus | Detailed PDF |
 |---|---|---|
-| Folded-cascode amplifier | Class-AB output stage, gain, stability, load-dependent bandwidth | [Read case study](Project-01-folded-cascode.pdf) |
-| 2.3 V LDO regulator | OTA/PMOS feedback loop, DC load regulation, transient response | [Read case study](Project-02-ldo-regulator.pdf) |
-| Telescopic-cascode amplifier | Biasing, headroom, common-mode behavior, PSRR/CMRR | [Read case study](Project-03-telescopic-cascode.pdf) |
-| Constant-gm current references | Three CMOS reference topologies, supply and temperature sweeps | [Read case study](Project-04-constant-gm.pdf) |
+| Folded-cascode amplifier | Class-AB output stage, gain, stability, load-dependent bandwidth | [Read case study](downloads/projects/analog/Project-01-folded-cascode.pdf) |
+| 2.3 V LDO regulator | OTA/PMOS feedback loop, DC load regulation, transient response | [Read case study](downloads/projects/analog/Project-02-ldo-regulator.pdf) |
+| Telescopic-cascode amplifier | Biasing, headroom, common-mode behavior, PSRR/CMRR | [Read case study](downloads/projects/analog/Project-03-telescopic-cascode.pdf) |
+| Constant-gm current references | Three CMOS reference topologies, supply and temperature sweeps | [Read case study](downloads/projects/analog/Project-04-constant-gm.pdf) |
 
 ## Digital implementation and verification
 
-- [32 nm four-bit CMOS adder](Project-08-cmos-adder.pdf): transistor sizing, DRC/LVS, and extracted timing/power.
-- [GCN accelerator](Project-07-gcn-accelerator.pdf): RTL, synthesis, and physical implementation with reference-classification checks.
-- [APB interface for an FP8 accelerator](Project-05-fp8-apb.pdf): my interface/register-map contribution to the team design.
-- [Five-stage MIPS processor](Project-06-pipelined-mips.pdf): forwarding, stalls, branch flushing, and directed regressions.
-- [FIFO with DPI-C and assertions](Project-10-fifo-dpi-sva.pdf), [asynchronous FIFO](Project-09-async-fifo.pdf), and [VeriChip](Project-11-verichip.pdf): behavioral checks, assertions, and verification planning.
+- [32 nm four-bit CMOS adder](downloads/projects/digital/Project-08-cmos-adder.pdf): transistor sizing, DRC/LVS, and extracted timing/power.
+- [GCN accelerator](downloads/projects/digital/Project-07-gcn-accelerator.pdf): RTL, synthesis, and physical implementation with reference-classification checks.
+- [APB interface for an FP8 accelerator](downloads/projects/digital/Project-05-fp8-apb.pdf): my interface/register-map contribution to the team design.
+- [Five-stage MIPS processor](downloads/projects/digital/Project-06-pipelined-mips.pdf): forwarding, stalls, branch flushing, and directed regressions.
+- [FIFO with DPI-C and assertions](downloads/projects/verification/Project-10-fifo-dpi-sva.pdf), [asynchronous FIFO](downloads/projects/verification/Project-09-async-fifo.pdf), and [VeriChip](downloads/projects/verification/Project-11-verichip.pdf): behavioral checks, assertions, and verification planning.
 
-The [complete project library](PROJECT-INDEX.md) also includes the digital clock, buck converter, traffic-signal prototype, 8051 gas detector, energy-billing demonstrator, speech analysis, load-flow study, and audio encryption/decryption study.
+The [complete project library](docs/PROJECT-INDEX.md) also includes the digital clock, buck converter, traffic-signal prototype, 8051 gas detector, energy-billing demonstrator, speech analysis, load-flow study, and audio encryption/decryption study.
 
 ## Experience and academic background
 
@@ -41,6 +43,21 @@ The [complete project library](PROJECT-INDEX.md) also includes the digital clock
 
 ## Files and maintenance
 
-`Project-*.pdf` contains the detailed case studies. `01-*.pdf` through `05-*.pdf` are the earlier short briefs. The original Analog resume remains the only published resume version.
+`downloads/projects/` contains the detailed case studies, grouped by engineering area. `downloads/briefs/` contains the earlier short briefs. The original Analog resume remains the only published resume version.
 
-The repository also retains the HTML/CSS/JavaScript portfolio source and its figures for optional future use. No build dependencies are required. See the [structure/editing guide](PORTFOLIO-STRUCTURE.md) and [resume guide](RESUME-GUIDE.md) for maintenance. The [repository comparison](REPOSITORY-REVIEW.md) records documentation opportunities and matching source repositories.
+The repository contains the HTML/CSS/JavaScript source for the live portfolio website. No build dependencies are required. See the [structure/editing guide](docs/PORTFOLIO-STRUCTURE.md) and [resume guide](docs/RESUME-GUIDE.md) for maintenance. The [repository comparison](docs/REPOSITORY-REVIEW.md) records documentation opportunities and matching source repositories.
+
+## Repository layout
+
+```text
+index.html                  Website entry point
+assets/css/                 Styles and responsive layouts
+assets/js/                  Page rendering and interaction
+assets/images/              Project schematics, waveforms, and photographs
+data/                       Project and resume content
+downloads/projects/         Three-page PDFs, grouped by discipline
+downloads/briefs/            Earlier illustrated briefs and previews
+downloads/resumes/           Published resume PDFs
+downloads/                  Complete project PDF collection ZIP
+docs/                       Project index and maintenance guides
+```
