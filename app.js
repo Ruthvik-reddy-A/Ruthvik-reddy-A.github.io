@@ -86,6 +86,7 @@ function renderCaseStudy(project) {
     <div class="case-hero"><p class="eyebrow accent">${escapeHtml(project.label)} <span aria-hidden="true">/</span> ${escapeHtml(project.term)}</p>
     <h2 id="case-title" tabindex="-1">${escapeHtml(project.title)}</h2><p class="case-lead">${escapeHtml(project.outcome || project.summary)}</p>
     <div class="case-meta"><span>${escapeHtml(project.course)}</span><span>${escapeHtml(project.kind)}</span></div></div>
+    ${project.repository ? `<div class="repository-action"><a class="text-link" href="${escapeHtml(project.repository)}" target="_blank" rel="noopener noreferrer">Explore project repository ↗</a><span>Files and documentation on GitHub</span></div>` : ''}
     ${gallery(project)}
     ${project.results.length ? `<dl class="result-grid">${project.results.map(([label,value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>` : ''}
     <div class="case-layout"><aside class="case-index" aria-label="Case study sections"><span class="eyebrow">PROJECT STORY</span><button data-section="case-overview">01 / Situation & task</button><button data-section="case-approach">02 / Actions</button><button data-section="case-results">03 / Results</button><button data-section="case-reflection">04 / Scope & context</button>${project.file ? '<button data-section="case-evidence">05 / Project brief</button>' : ''}</aside>

@@ -1,6 +1,6 @@
 # Adding or replacing a portfolio resume
 
-The website is published from the **main** branch and repository root of [Ruthvik-reddy-A.github.io](https://github.com/Ruthvik-reddy-A/Ruthvik-reddy-A.github.io). GitHub Pages republishes when those files change.
+The website is published from the **main** branch and repository root of [Ruthvik-reddy-A.github.io](https://github.com/Ruthvik-reddy-A/Ruthvik-reddy-A.github.io). A connected host can republish when those files change; see [HOSTING.md](HOSTING.md) for Netlify setup.
 
 ## Add another version
 
@@ -19,7 +19,7 @@ The website is published from the **main** branch and repository root of [Ruthvi
   }
 ```
 
-4. Commit the edit. Wait for the GitHub Pages deployment to finish, then visit [Resumes](https://ruthvik-reddy-a.github.io/#resumes). Test both **View PDF** and **Download resume**.
+4. Commit the edit. Wait for your connected host’s deployment to finish, then visit `#resumes` on the live site. Test both **View PDF** and **Download resume**.
 
 The filename and capitalization in `file` must match the uploaded PDF exactly. Reorder objects to change the card order. Keep titles, descriptions, and tags accurate to that version. Each listed entry creates a card automatically; no HTML or CSS edit is needed.
 

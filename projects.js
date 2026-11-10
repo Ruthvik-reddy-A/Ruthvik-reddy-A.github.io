@@ -1,4 +1,4 @@
-// Facts and figures: supplied reports and confirmed resumes. See PORTFOLIO.md.
+// Facts and figures: supplied reports and confirmed resumes.
 const projects = [
   {
     "title": "Folded-cascode amplifier",
@@ -134,7 +134,8 @@ const projects = [
     ],
     "situation": "The load on a regulator changes while its output must stay close to the required voltage. This project evaluates a 2.3 V LDO from a 2.5 V supply across a 0.1–50 mA load range.",
     "task": "Build the OTA-controlled feedback loop and distinguish steady-state regulation from the response to a sudden load change.",
-    "outcome": "Held the simulated DC output within an 8 mV span across four load conditions by designing an OTA-driven PMOS regulator and evaluating its feedback response."
+    "outcome": "Held the simulated DC output within an 8 mV span across four load conditions by designing an OTA-driven PMOS regulator and evaluating its feedback response.",
+    "repository": "https://github.com/Ruthvik-reddy-A/Low-Dropout-Regulator-LDO-"
   },
   {
     "title": "Telescopic-cascode amplifier",
@@ -828,7 +829,8 @@ const projects = [
     ],
     "situation": "A charging-oriented power-conversion prototype needs rectification, smoothing, and a controlled lower DC output. The project combines circuit calculations, simulation, and hardware observations.",
     "task": "Contribute component calculations, LTspice/Simulink evaluation, hardware work, and documentation as part of the team.",
-    "outcome": "Connected rectifier and buck-converter analysis with LTspice/Simulink waveforms and hardware observations, including documented no-load and full-load regulation calculations."
+    "outcome": "Connected rectifier and buck-converter analysis with LTspice/Simulink waveforms and hardware observations, including documented no-load and full-load regulation calculations.",
+    "repository": "https://github.com/Ruthvik-reddy-A/Rectifier-based-buck-converter-prototype-for-charging-applications"
   },
   {
     "id": "traffic-priority",
@@ -882,7 +884,8 @@ const projects = [
     ],
     "situation": "The prototype explores how a vehicle request can change a traffic signal. An IR emitter represents the approaching emergency vehicle, with receivers connected to the signal-control system.",
     "task": "Implement the Arduino control and contribute the report and presentation, working with the team’s LabVIEW and hardware integration.",
-    "outcome": "Demonstrated IR-triggered signal selection on an Arduino/LabVIEW prototype: the selected direction turns green while the other directions turn red."
+    "outcome": "Demonstrated IR-triggered signal selection on an Arduino/LabVIEW prototype: the selected direction turns green while the other directions turn red.",
+    "repository": "https://github.com/Ruthvik-reddy-A/Emergency-vehicle-traffic-clearing-system-using-LABVIEW-and-Arduino"
   },
   {
     "id": "gas-detection",
@@ -928,7 +931,8 @@ const projects = [
     ],
     "situation": "A gas-detection input must be translated into a clear alarm state and output controls. The academic project explores that path with an AT89S52, controller code, and circuit simulation.",
     "task": "Contribute to the team’s microcontroller implementation and documented normal/alarm-state behavior using the supplied 8051 and Proteus materials.",
-    "outcome": "Documented normal and alarm-state behavior for an 8051-based controller, connecting sensor input to display, LED/buzzer alerts, and fan activation."
+    "outcome": "Documented normal and alarm-state behavior for an 8051-based controller, connecting sensor input to display, LED/buzzer alerts, and fan activation.",
+    "repository": "https://github.com/Ruthvik-reddy-A/LPG-Gas-leakage-detector-using-8051-Microcontroller"
   },
   {
     "id": "smart-grid",
@@ -974,7 +978,8 @@ const projects = [
     ],
     "situation": "Energy consumption and generation values can be combined into a net-value calculation and displayed remotely. This demonstrator uses substituted firmware inputs to exercise that calculation and cloud connection.",
     "task": "Work with the team to implement the calculation on an ESP8266 and display the result through Arduino IoT Cloud.",
-    "outcome": "Demonstrated cloud-connected net-energy billing calculations from example consumption and generation inputs using an ESP8266 and a fixed tariff."
+    "outcome": "Demonstrated cloud-connected net-energy billing calculations from example consumption and generation inputs using an ESP8266 and a fixed tariff.",
+    "repository": "https://github.com/Ruthvik-reddy-A/IoT-Based-Smart-grid-along-with-auto-billing-"
   },
   {
     "id": "speech-analysis",
@@ -1024,7 +1029,8 @@ const projects = [
     "images": [],
     "situation": "A single spectrum cannot show when different frequency components occur in a speech sample. This study compares the audio waveform and FFT view with a time-frequency representation.",
     "task": "Use MATLAB to read the sample, calculate the FFT, and inspect local frequency content using the supplied STFT configuration.",
-    "outcome": "Produced waveform and spectrogram views using a 64-sample Hamming window, 32-sample overlap, and 64-point transform, making the analysis configuration explicit."
+    "outcome": "Produced waveform and spectrogram views using a 64-sample Hamming window, 32-sample overlap, and 64-point transform, making the analysis configuration explicit.",
+    "repository": "https://github.com/Ruthvik-reddy-A/Speech-Signal-Processing-DSP"
   },
   {
     "id": "load-flow",
