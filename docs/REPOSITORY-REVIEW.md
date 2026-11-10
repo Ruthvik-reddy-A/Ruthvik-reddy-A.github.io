@@ -4,7 +4,7 @@ Reviewed 9 November 2026 against the public repositories at https://github.com/R
 
 ## Main finding
 
-The portfolio presents 19 case studies and a stronger analog/digital IC story than the public GitHub repository names currently reveal. GitHub contains substantial earlier embedded and power work. Six repositories have clear matches to existing case studies and are now linked from those cases. See [the complete mapping](PROJECT-INDEX.md).
+The portfolio presents 25 case studies and a stronger analog/digital IC story than the public GitHub repository names currently reveal. GitHub contains substantial earlier embedded and power work. Six repositories have clear matches to existing case studies and are now linked from those cases. See [the complete mapping](PROJECT-INDEX.md).
 
 | Repository | Observed contents | Portfolio relationship / next step |
 |---|---|---|

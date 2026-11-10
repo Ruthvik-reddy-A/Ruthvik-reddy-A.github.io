@@ -281,6 +281,282 @@ const projects = [
     "detailedPdf": "downloads/projects/analog/Project-04-constant-gm.pdf"
   },
   {
+    "id": "mos-common-source",
+    "title": "MOS characterization & resistive-load amplifier",
+    "category": "analog",
+    "label": "Analog IC design",
+    "course": "EEE 433/591 · Analog IC Design · Lab 1",
+    "term": "Fall 2025",
+    "summary": "Connected transistor operating-point analysis to amplifier behavior, reporting 21.38 dB transient voltage gain for a 10 kHz small-signal test.",
+    "outcome": "Connected transistor operating-point analysis to amplifier behavior, reporting 21.38 dB transient voltage gain for a 10 kHz small-signal test.",
+    "results": [
+      [
+        "Transient voltage gain",
+        "21.38 dB"
+      ],
+      [
+        "Input / output swing",
+        "20 / 234.5 mVpp"
+      ],
+      [
+        "NMOS drain current",
+        "101.1 µA"
+      ]
+    ],
+    "question": "How do MOS operating conditions and load resistance shape a common-source amplifier?",
+    "situation": "A useful amplifier bias point must balance gain and output headroom. This lab starts with a transistor characterization and carries those observations into a resistive-load common-source stage.",
+    "task": "Characterize the NMOS, establish the amplifier bias, and compare DC, AC, transient, and load-sweep behavior.",
+    "role": "Prepared transistor and amplifier schematics, operating-point comparisons, transfer curves, and transient/AC plots in the submitted Cadence lab report.",
+    "approach": [
+      "Compared simulated NMOS operating-point quantities with hand analysis. The report lists 101.1 µA drain current, 507.07 µS transconductance, and 64.23 kΩ output resistance for the characterized device.",
+      "Evaluated the resistive-load stage with DC transfer curves and a 10 kHz sinusoidal input. Used the reported 20 mVpp input and 234.5 mVpp output to calculate a gain magnitude of 11.725 V/V, or 21.38 dB.",
+      "Examined input-amplitude and load-resistance sweeps to relate compression and clipping to bias and to describe the gain-versus-bandwidth tradeoff."
+    ],
+    "validation": "The report gives 21.38 dB transient gain for the stated small-signal test. The device comparison lists 101.1 µA simulated drain current against 100 µA in the hand calculation. These are separate device and amplifier observations.",
+    "tradeoff": "The gain is a transient amplitude-ratio result, not an independently verified AC bandwidth specification. The report contains inconsistent phase and signal-range wording, so no phase or maximum linear-swing claim is promoted.",
+    "tags": [
+      "Cadence Virtuoso",
+      "MOS characterization",
+      "Common-source amplifiers",
+      "DC operating-point analysis",
+      "Transient analysis"
+    ],
+    "source": "EEE 433/591 Lab 1 submitted report, physical PDF pp. 3–4, 6, 9–10, 13–14.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-mos-cs-p6-1.webp",
+        "title": "Resistive-load common-source schematic",
+        "caption": "Source report p. 6: NMOS stage and load used in the circuit study.",
+        "alt": "Resistive-load common-source schematic — Source report p. 6: NMOS stage and load used in the circuit study.",
+        "width": 602,
+        "height": 684
+      },
+      {
+        "src": "assets/images/img-mos-cs-p9-1.webp",
+        "title": "Output transient waveform",
+        "caption": "Source report p. 9: output waveform for the documented small-signal experiment.",
+        "alt": "Output transient waveform — Source report p. 9: output waveform for the documented small-signal experiment.",
+        "width": 1131,
+        "height": 595
+      }
+    ],
+    "detailedPdf": "downloads/projects/analog/Project-20-mos-common-source.pdf"
+  },
+  {
+    "id": "current-mirrors",
+    "title": "Regular & cascode current mirrors",
+    "category": "analog",
+    "label": "Analog IC design",
+    "course": "EEE 433/591 · Analog IC Design · Lab 2",
+    "term": "Fall 2025",
+    "summary": "Compared regular and cascode current mirrors, with reported output impedances of 17.73 kΩ and 35.9 kΩ and current ratios near the intended 5:1 scaling.",
+    "outcome": "Compared regular and cascode current mirrors, with reported output impedances of 17.73 kΩ and 35.9 kΩ and current ratios near the intended 5:1 scaling.",
+    "results": [
+      [
+        "Regular / cascode Rout",
+        "17.73 / 35.9 kΩ"
+      ],
+      [
+        "Reported current ratios",
+        "5.062 / 5.056"
+      ],
+      [
+        "Output-current target",
+        "0.5 mA"
+      ]
+    ],
+    "question": "How does cascoding change current-source output resistance and voltage headroom?",
+    "situation": "A current mirror should maintain its programmed current as the output voltage changes. A regular mirror and a cascoded version expose the tradeoff between output resistance, bias complexity, and headroom.",
+    "task": "Design and simulate both topologies for a nominal 0.5 mA output from a 0.1 mA reference, then compare DC and small-signal behavior.",
+    "role": "Sized and biased the mirror circuits, documented DC sweeps and small-signal tests, and compared the two implementations in the submitted lab report.",
+    "approach": [
+      "Swept output voltage and identified the reported 0.5 mA crossing: 767.324 mV for the regular mirror and 887.297 mV for the cascode. These crossings are operating-point observations, not measured minimum compliance voltages.",
+      "Perturbed the reference branch at 1 kHz and compared reported peak current ratios: 5.062 for the regular mirror and 5.056 for the cascode, against the intended ratio of five.",
+      "Compared the output-impedance and AC-response results. The final table reports 17.73 kΩ versus 35.9 kΩ and bandwidths of 52.501 kHz versus 51.714 kHz."
+    ],
+    "validation": "The final comparison table reports approximately twice the output impedance for the cascode in these simulations, with a slightly lower bandwidth. Both reported peak-current ratios are near five. This is a nominal simulation comparison.",
+    "tradeoff": "The two output-impedance tests use different perturbation amplitudes (10 mV and 20 mV). The report does not establish mismatch, process-corner, or silicon performance. The earlier resume summary is not used for the impedance or bandwidth numbers.",
+    "tags": [
+      "Current mirrors",
+      "Cascode biasing",
+      "Cadence Virtuoso",
+      "Small-signal analysis",
+      "AC simulation"
+    ],
+    "source": "EEE 433/591 Lab 2 submitted report, physical PDF pp. 3–5, 7, 9–11, 13.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-mirrors-p7-0.webp",
+        "title": "Cascode current-mirror schematic",
+        "caption": "Source report p. 7: cascoded output branch and biasing.",
+        "alt": "Cascode current-mirror schematic — Source report p. 7: cascoded output branch and biasing.",
+        "width": 794,
+        "height": 460
+      },
+      {
+        "src": "assets/images/img-mirrors-p11-0.webp",
+        "title": "Cascode reference and output currents",
+        "caption": "Source report p. 11: the 1 kHz current-scaling experiment.",
+        "alt": "Cascode reference and output currents — Source report p. 11: the 1 kHz current-scaling experiment.",
+        "width": 902,
+        "height": 581
+      }
+    ],
+    "detailedPdf": "downloads/projects/analog/Project-21-current-mirrors.pdf"
+  },
+  {
+    "id": "active-load-amplifier",
+    "title": "Active-load common-source amplifier",
+    "category": "analog",
+    "label": "Analog IC design",
+    "course": "EEE 433/591 · Analog IC Design · Lab 3",
+    "term": "Fall 2025",
+    "summary": "Designed an active-PMOS-load common-source stage with reported simulated gain of 31.33 dB and 1.103 MHz bandwidth, then compared it with a cascoded implementation.",
+    "outcome": "Designed an active-PMOS-load common-source stage with reported simulated gain of 31.33 dB and 1.103 MHz bandwidth, then compared it with a cascoded implementation.",
+    "results": [
+      [
+        "Simulated gain",
+        "31.33 dB"
+      ],
+      [
+        "−3 dB bandwidth",
+        "1.103 MHz"
+      ],
+      [
+        "Simulated branch current",
+        "51.29 µA"
+      ]
+    ],
+    "question": "How does an active load increase gain, and what changes when the signal path is cascoded?",
+    "situation": "An active PMOS load supplies a high small-signal resistance without a large physical resistor. The report compares a simple common-source stage with a cascoded circuit and examines the resulting frequency response and distortion.",
+    "task": "Bias the active-load stage, compare hand analysis with simulation, and investigate gain, bandwidth, transfer characteristics, and clipping.",
+    "role": "Prepared operating-point schematics, AC/transient simulations, spectrum plots, and analytical comparisons for the two reported amplifier configurations.",
+    "approach": [
+      "Established bias and device sizing for the 2.5 V, 1 pF-load study. Compared the simple-stage simulated branch current of 51.29 µA with the 50 µA hand calculation.",
+      "Used operating-point, AC, and DC-transfer plots to evaluate the active-load stage. The simple-stage table reports 31.33 dB gain and 1.103 MHz bandwidth, compared with 33.98 dB and 1.59 MHz in the hand analysis.",
+      "Increased input amplitude and inspected output spectra to explain clipping-related harmonics. Compared the simple stage with a cascoded implementation while retaining the report’s conflicting summary values as a documentation limitation."
+    ],
+    "validation": "The simple common-source stage reports 31.33 dB gain, 1.103 MHz bandwidth, and 51.29 µA branch current. The report also demonstrates a higher-gain cascoded variant, but its conflicting summary tables prevent an unqualified numerical comparison.",
+    "tradeoff": "The cascode section lists inconsistent bandwidth and gain summaries, so its numbers are not used as headline results. Output peak readings are not treated as peak-to-peak linear swing, and phase at unity gain is not relabelled as phase margin.",
+    "tags": [
+      "Analog IC design",
+      "Active loads",
+      "Cadence Virtuoso",
+      "Frequency response",
+      "Distortion analysis"
+    ],
+    "source": "EEE 433/591 Lab 3 submitted report, physical PDF pp. 3–8, 11–18; simple-stage result table on p. 8.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-active-cs-p3-0.webp",
+        "title": "Active-load amplifier operating point",
+        "caption": "Source report p. 3: transistor operating-point annotations.",
+        "alt": "Active-load amplifier operating point — Source report p. 3: transistor operating-point annotations.",
+        "width": 1029,
+        "height": 791
+      },
+      {
+        "src": "assets/images/img-active-cs-p4-1.webp",
+        "title": "Simple-stage gain and phase",
+        "caption": "Source report p. 4: gain and bandwidth markers for the simple common-source stage.",
+        "alt": "Simple-stage gain and phase — Source report p. 4: gain and bandwidth markers for the simple common-source stage.",
+        "width": 917,
+        "height": 549
+      }
+    ],
+    "detailedPdf": "downloads/projects/analog/Project-22-active-load-amplifier.pdf"
+  },
+  {
+    "id": "differential-ota",
+    "title": "Differential transconductance amplifier",
+    "category": "analog",
+    "label": "Analog IC design",
+    "course": "EEE 433/591 · Analog IC Design · Lab 4",
+    "term": "Fall 2025",
+    "summary": "Evaluated a differential-to-single-ended OTA with reported AC gain of 33.55 dB, 224.25 kHz bandwidth, and 10.69 MHz unity-gain frequency.",
+    "outcome": "Evaluated a differential-to-single-ended OTA with reported AC gain of 33.55 dB, 224.25 kHz bandwidth, and 10.69 MHz unity-gain frequency.",
+    "results": [
+      [
+        "AC gain",
+        "33.55 dB"
+      ],
+      [
+        "−3 dB bandwidth",
+        "224.25 kHz"
+      ],
+      [
+        "Unity-gain frequency",
+        "10.69 MHz"
+      ]
+    ],
+    "question": "How can a transistor-biased differential pair provide gain while rejecting common-mode and supply disturbances?",
+    "situation": "A differential OTA must amplify the intended input difference while controlling its operating point and response to unwanted inputs. This lab examines a transistor tail source, active load, DC feedback, and separate AC/transient test configurations.",
+    "task": "Design and evaluate the differential-to-single-ended OTA, including differential gain, common-mode response, supply response, and a feedback step test.",
+    "role": "Documented device sizing and operating points, differential and common-mode simulations, supply-response plots, and unity-feedback transient behavior.",
+    "approach": [
+      "Established transistor bias and the DC feedback testbench, and tabulated device sizes and branch currents in the report.",
+      "Measured the differential AC response. The report lists 33.551 dB low-frequency gain, 224.254 kHz bandwidth, and 10.6883 MHz unity-gain frequency.",
+      "Examined common-mode and supply-response plots separately from the differential test, then simulated a step with unity-gain feedback. Kept these test configurations distinct when interpreting the results."
+    ],
+    "validation": "The differential AC plot supports approximately 33.55 dB gain, 224.25 kHz bandwidth, and 10.69 MHz unity-gain frequency. Common-mode, supply-rejection, and step-response figures broaden the study beyond gain alone.",
+    "tradeoff": "Phase at unity gain is not sufficient by itself to establish loop phase margin. The report has inconsistent transient amplitude, CMRR arithmetic, and supply-noise wording; those quantities are not promoted as verified headline metrics. The copied F2021 template heading is not used as the project date.",
+    "tags": [
+      "Operational transconductance amplifiers",
+      "Differential pairs",
+      "Cadence Virtuoso",
+      "AC analysis",
+      "Common-mode analysis"
+    ],
+    "source": "EEE 433/591 Lab 4 submitted report, physical PDF pp. 5–7, 9–16; differential AC markers on p. 7. Semester follows the supplied Semester 1 course context.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-ota-p5-0.webp",
+        "title": "OTA transistor operating point",
+        "caption": "Source report p. 5: differential pair, active load, and transistor bias network.",
+        "alt": "OTA transistor operating point — Source report p. 5: differential pair, active load, and transistor bias network.",
+        "width": 624,
+        "height": 599
+      },
+      {
+        "src": "assets/images/img-ota-p7-1.webp",
+        "title": "Differential AC response",
+        "caption": "Source report p. 7: low-frequency gain, bandwidth, and unity-gain markers.",
+        "alt": "Differential AC response — Source report p. 7: low-frequency gain, bandwidth, and unity-gain markers.",
+        "width": 1194,
+        "height": 593
+      }
+    ],
+    "detailedPdf": "downloads/projects/analog/Project-23-differential-ota.pdf"
+  },
+  {
     "id": "fp8-apb",
     "title": "APB interface for an FP8 accelerator",
     "category": "digital",
@@ -564,6 +840,144 @@ const projects = [
     "task": "Size the critical carry path, implement the layout, run DRC/LVS, and characterize delay and power after extraction.",
     "outcome": "Implemented a four-bit adder occupying 40.083 µm², with 277 ps extracted worst-case delay and 47.3 µW average power; compared it with the 152 ps schematic result.",
     "detailedPdf": "downloads/projects/digital/Project-08-cmos-adder.pdf"
+  },
+  {
+    "id": "standard-cell-design",
+    "title": "Inverter & NAND standard-cell design",
+    "category": "digital",
+    "label": "Device & custom digital design",
+    "course": "EEE 425/591 · Digital System Circuits · Lab 2",
+    "term": "Fall 2025",
+    "summary": "Designed INVx03 and NAND2x04 cells, measured directional propagation delays, and documented clean DRC and passing LVS results for both layouts.",
+    "outcome": "Designed INVx03 and NAND2x04 cells, measured directional propagation delays, and documented clean DRC and passing LVS results for both layouts.",
+    "results": [
+      [
+        "INV high-to-low / low-to-high",
+        "11.9 / 14.1 ps"
+      ],
+      [
+        "NAND high-to-low / low-to-high",
+        "9.31 / 16.7 ps"
+      ],
+      [
+        "Layout checks",
+        "DRC clean · LVS pass"
+      ]
+    ],
+    "question": "How do transistor sizing and layout verification turn logic gates into checked custom cells?",
+    "situation": "A standard cell needs correct logic behavior, characterized transitions, and a layout that matches its schematic. This lab follows two gates through schematic testing and physical verification.",
+    "task": "Size and implement INVx03 and NAND2x04 cells, measure their 50% propagation delays, and check their layouts with DRC and LVS.",
+    "role": "Prepared cell sizing, schematics, symbols, timing plots, layouts, and physical-verification evidence in the submitted report.",
+    "approach": [
+      "Sized the INVx03 with 900 nm NMOS and 1370 nm PMOS widths, and the NAND2x04 with reported widths of 2863 nm and 2260 nm.",
+      "Measured high-to-low and low-to-high propagation delays separately. The inverter values are 11.9 ps and 14.1 ps; the NAND values are 9.31 ps and 16.7 ps.",
+      "Built both cell layouts and documented the DRC-clean and LVS-pass outputs alongside each implementation."
+    ],
+    "validation": "Both cell layouts have reported clean DRC and passing LVS results. The directional timing values show unequal rise/fall-path delays, especially for the NAND cell; the case study retains these differences.",
+    "tradeoff": "The listed delays come from the schematic-test section of the report and are not labelled post-layout timing. A complete library characterization across input slew, output load, and process corners is not demonstrated, and ±5% delay symmetry is not claimed.",
+    "tags": [
+      "CMOS standard cells",
+      "Transistor sizing",
+      "IC layout",
+      "DRC/LVS",
+      "Timing characterization"
+    ],
+    "source": "EEE 425/591 Digital System Circuits Lab 2 submitted report, physical PDF pp. 1–6; delay table p. 3 and verification evidence pp. 5–6.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-standard-cells-p4-0.webp",
+        "title": "INVx03 layout",
+        "caption": "Source report p. 4: inverter cell layout.",
+        "alt": "INVx03 layout — Source report p. 4: inverter cell layout.",
+        "width": 705,
+        "height": 776
+      },
+      {
+        "src": "assets/images/img-standard-cells-p4-1.webp",
+        "title": "NAND2x04 layout",
+        "caption": "Source report p. 4: two-input NAND cell layout.",
+        "alt": "NAND2x04 layout — Source report p. 4: two-input NAND cell layout.",
+        "width": 1487,
+        "height": 816
+      }
+    ],
+    "detailedPdf": "downloads/projects/digital/Project-24-standard-cell-design.pdf"
+  },
+  {
+    "id": "finfet-characterization",
+    "title": "ASAP7 FinFET characterization",
+    "category": "digital",
+    "label": "Device & custom digital design",
+    "course": "EEE 525 · VLSI Design · Lab 1",
+    "term": "Spring 2026",
+    "summary": "Compared four ASAP7 threshold-voltage device options across −40, 25, and 120 °C, documenting transfer curves, subthreshold swing, and threshold-voltage extraction.",
+    "outcome": "Compared four ASAP7 threshold-voltage device options across −40, 25, and 120 °C, documenting transfer curves, subthreshold swing, and threshold-voltage extraction.",
+    "results": [
+      [
+        "Threshold-voltage options",
+        "SLVT · LVT · RVT · SRAM"
+      ],
+      [
+        "Temperature points",
+        "−40 / 25 / 120 °C"
+      ],
+      [
+        "NMOS LVT swing at 25 °C",
+        "64.435 mV/dec"
+      ]
+    ],
+    "question": "How do temperature and device threshold options affect FinFET transfer characteristics?",
+    "situation": "Selecting a transistor option requires understanding leakage, gate control, and drive behavior. The ASAP7 lab compares NMOS and PMOS devices across threshold options and temperature points.",
+    "task": "Run and interpret device-current sweeps, extract subthreshold swing and threshold voltage, and relate the reported curves to device-selection tradeoffs.",
+    "role": "Prepared the ASAP7 device characterization report with NMOS/PMOS curves, measurement-command screenshots, and temperature-dependent result tables.",
+    "approach": [
+      "Compared SLVT, LVT, RVT, and SRAM model options, including LVT transfer curves at −40, 25, and 120 °C and multi-option comparisons at 25 °C.",
+      "Tabulated subthreshold swing using the documented measurement expressions. NMOS LVT values are 49.166, 64.435, and 90.953 mV/dec at the three temperature points.",
+      "Documented threshold-voltage extraction and RVT output-current sweeps. Kept extraction results separate from a claim of measured cell speed or physical silicon behavior."
+    ],
+    "validation": "The NMOS LVT subthreshold-swing table reports an increase from 49.166 mV/dec at −40 °C to 90.953 mV/dec at 120 °C, with 64.435 mV/dec at 25 °C. The report covers both polarities and four device options.",
+    "tradeoff": "These are simulated device-model results. The report contains inconsistent fin arithmetic, PMOS ranking, and effective-current descriptions; those interpretations are excluded. PMOS signed slopes require a consistent magnitude convention before cross-polarity comparison.",
+    "tags": [
+      "FinFET characterization",
+      "ASAP7 PDK",
+      "SPICE simulation",
+      "Subthreshold swing",
+      "Temperature sweeps"
+    ],
+    "source": "EEE 525 VLSI Design Lab 1 submitted report, physical PDF pp. 1–9; subthreshold-swing results and measurement commands p. 5.",
+    "kind": "Individual lab study",
+    "flow": [
+      "Device sizing",
+      "Simulation",
+      "Result comparison",
+      "Engineering interpretation"
+    ],
+    "images": [
+      {
+        "src": "assets/images/img-finfet-p1-0.webp",
+        "title": "NMOS LVT temperature sweep",
+        "caption": "Source report p. 1: log current versus gate voltage at three temperatures.",
+        "alt": "NMOS LVT temperature sweep — Source report p. 1: log current versus gate voltage at three temperatures.",
+        "width": 1232,
+        "height": 926
+      },
+      {
+        "src": "assets/images/img-finfet-p2-1.webp",
+        "title": "NMOS threshold-option comparison",
+        "caption": "Source report p. 2: SLVT, LVT, RVT, and SRAM transfer curves at 25 °C.",
+        "alt": "NMOS threshold-option comparison — Source report p. 2: SLVT, LVT, RVT, and SRAM transfer curves at 25 °C.",
+        "width": 1347,
+        "height": 1003
+      }
+    ],
+    "detailedPdf": "downloads/projects/digital/Project-25-finfet-characterization.pdf"
   },
   {
     "id": "async-fifo",

@@ -4,7 +4,7 @@
 
 I am pursuing an MS in Electrical Engineering at Arizona State University. My primary interests are analog and mixed-signal IC design, supported by project work in custom CMOS circuits, RTL, physical implementation, and verification.
 
-**[Explore all 19 project PDFs](docs/PROJECT-INDEX.md)** · **[Download the complete PDF collection](downloads/Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](downloads/resumes/Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
+**[Explore all 25 project PDFs](docs/PROJECT-INDEX.md)** · **[Download the complete PDF collection](downloads/Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](downloads/resumes/Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
 
 **[Open the portfolio website](https://ruthvik-reddy-a.github.io/)**
 

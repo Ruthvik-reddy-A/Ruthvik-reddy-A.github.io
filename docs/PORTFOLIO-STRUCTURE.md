@@ -1,6 +1,6 @@
 # Portfolio structure and editing map
 
-The [live website](https://ruthvik-reddy-a.github.io/) and [repository README](../README.md) both provide access to the project documents. All 19 case studies have View PDF and Download PDF actions; the Projects library has a complete ZIP download.
+The [live website](https://ruthvik-reddy-a.github.io/) and [repository README](../README.md) both provide access to the project documents. All 25 case studies have View PDF and Download PDF actions; the Projects library has a complete ZIP download.
 
 ## Folders
 
