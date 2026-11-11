@@ -4,7 +4,7 @@
 
 I am pursuing an MS in Electrical Engineering at Arizona State University. My primary interests are analog and mixed-signal IC design, supported by project work in custom CMOS circuits, RTL, physical implementation, and verification.
 
-**[Explore all 25 project PDFs](docs/PROJECT-INDEX.md)** · **[Download the complete PDF collection](downloads/Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](downloads/resumes/Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
+**[Explore all 30 project PDFs](docs/PROJECT-INDEX.md)** · **[Download the complete PDF collection](downloads/Ruthvik-Reddy-Project-Case-Studies.zip)** · **[Analog resume](downloads/resumes/Ruthvik-Reddy-Analog-Resume.pdf)** · **[LinkedIn](https://www.linkedin.com/in/ruthvik-reddy-anthireddi/)**
 
 **[Open the portfolio website](https://ruthvik-reddy-a.github.io/)**
 
@@ -28,6 +28,10 @@ The website and this repository provide two ways to explore the work. Each detai
 - [FIFO with DPI-C and assertions](downloads/projects/verification/Project-10-fifo-dpi-sva.pdf), [asynchronous FIFO](downloads/projects/verification/Project-09-async-fifo.pdf), and [VeriChip](downloads/projects/verification/Project-11-verichip.pdf): behavioral checks, assertions, and verification planning.
 
 The [complete project library](docs/PROJECT-INDEX.md) also includes the digital clock, buck converter, traffic-signal prototype, 8051 gas detector, energy-billing demonstrator, speech analysis, load-flow study, and audio encryption/decryption study.
+
+## PCB and board design
+
+Five KiCad studies include board renders, source-repository links, and three-page PDFs: the ATmega328P data logger, ESP32 GPS/GSM tracker, breadboard supply, attributed solar-supply adaptation, and LED torch. Find them using the **PCB design** filter on the website or the [project index](docs/PROJECT-INDEX.md). Descriptions distinguish design artifacts from measured hardware results.
 
 ## Experience and academic background
 

@@ -4,7 +4,7 @@ Reviewed 9 November 2026 against the public repositories at https://github.com/R
 
 ## Main finding
 
-The portfolio presents 25 case studies and a stronger analog/digital IC story than the public GitHub repository names currently reveal. GitHub contains substantial earlier embedded and power work. Six repositories have clear matches to existing case studies and are now linked from those cases. See [the complete mapping](PROJECT-INDEX.md).
+The portfolio presents 30 case studies and a stronger analog/digital IC story than the public GitHub repository names currently reveal. GitHub contains substantial earlier embedded and power work. Six repositories have clear matches to existing case studies and are now linked from those cases. See [the complete mapping](PROJECT-INDEX.md).
 
 | Repository | Observed contents | Portfolio relationship / next step |
 |---|---|---|
@@ -39,3 +39,8 @@ docs/         Report, brief, and architecture diagrams
 ```
 
 Use only relevant folders. Do not imply that a report-only repository includes reproducible design files. No existing repositories were renamed, merged, deleted, or made public in this review. Existing portfolio metrics remain based on the supplied reports and resumes; repository marketing claims were not imported as new achievements.
+
+
+## PCB additions — 11 November 2026
+
+Five case studies link directly to their folders in PCB-design-projects. The datalogger is represented once despite its separate repository. KiCad source values take precedence over conflicting README summaries, and the solar design retains the documented Elektor attribution. All five PDFs are under downloads/projects/pcb/.

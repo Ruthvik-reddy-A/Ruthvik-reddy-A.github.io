@@ -1,6 +1,6 @@
 # Portfolio structure and editing map
 
-The [live website](https://ruthvik-reddy-a.github.io/) and [repository README](../README.md) both provide access to the project documents. All 25 case studies have View PDF and Download PDF actions; the Projects library has a complete ZIP download.
+The [live website](https://ruthvik-reddy-a.github.io/) and [repository README](../README.md) both provide access to the project documents. All 30 case studies have View PDF and Download PDF actions; the Projects library has a complete ZIP download.
 
 ## Folders
 
@@ -9,7 +9,7 @@ The [live website](https://ruthvik-reddy-a.github.io/) and [repository README](.
 - `assets/images/`: source figures retained at their original aspect ratios.
 - `data/projects.js`: project narratives, results, figure metadata, and document paths.
 - `data/resumes.js`: resume-card content and file paths.
-- `downloads/projects/{analog,digital,verification,embedded,power,signal}/`: detailed three-page PDFs.
+- `downloads/projects/{analog,digital,verification,pcb,embedded,power,signal}/`: detailed three-page PDFs.
 - `downloads/briefs/`: earlier illustrated PDFs and their WebP previews.
 - `downloads/resumes/`: approved resume PDFs.
 - `downloads/`: ZIP of all detailed project PDFs.

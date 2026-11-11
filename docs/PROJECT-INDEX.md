@@ -1,8 +1,8 @@
 # Project PDF library
 
-25 project case studies. Each PDF contains three pages covering the problem, implementation, evidence, and limitations.
+30 project case studies, each with a three-page PDF. PCB entries distinguish design artifacts from measured hardware results.
 
-[Open the portfolio](https://ruthvik-reddy-a.github.io/#projects) · [Download all PDFs](../downloads/Ruthvik-Reddy-Project-Case-Studies.zip)
+[Open portfolio](https://ruthvik-reddy-a.github.io/#projects) · [Download all PDFs](../downloads/Ruthvik-Reddy-Project-Case-Studies.zip)
 
 | Project | Discipline | Detailed PDF | Project files |
 | --- | --- | --- | --- |
@@ -25,6 +25,11 @@
 | [VeriChip verification](https://ruthvik-reddy-a.github.io/#project/verichip) | Verification | [View / download](../downloads/projects/verification/Project-11-verichip.pdf) | Evidence included in PDF |
 | [Verilog digital clock & alarm](https://ruthvik-reddy-a.github.io/#project/fpga-clock) | Digital | [View / download](../downloads/projects/digital/Project-12-fpga-clock.pdf) | Evidence included in PDF |
 | [Rectifier-fed buck converter prototype](https://ruthvik-reddy-a.github.io/#project/buck-converter) | Power | [View / download](../downloads/projects/power/Project-13-buck-converter.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Rectifier-based-buck-converter-prototype-for-charging-applications) |
+| [ATmega328P data-logger PCB](https://ruthvik-reddy-a.github.io/#project/pcb-datalogger) | Pcb | [View / download](../downloads/projects/pcb/Project-26-pcb-datalogger.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/MCU-Datalogger-With-Built-In-512K-EEPROM) |
+| [ESP32 GPS/GSM tracker PCB](https://ruthvik-reddy-a.github.io/#project/pcb-gps-gsm) | Pcb | [View / download](../downloads/projects/pcb/Project-27-pcb-gps-gsm.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/GPS%20%2B%20GSM%20Tracker%20with%20EEPROM%20Logging) |
+| [Breadboard power-supply PCB](https://ruthvik-reddy-a.github.io/#project/pcb-breadboard-supply) | Pcb | [View / download](../downloads/projects/pcb/Project-28-pcb-breadboard-supply.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/Breadboard-Power-Supply) |
+| [Tiny solar-supply PCB adaptation](https://ruthvik-reddy-a.github.io/#project/pcb-solar-supply) | Pcb | [View / download](../downloads/projects/pcb/Project-29-pcb-solar-supply.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/Tiny-Solar-Power-Supply) |
+| [Battery-powered LED torch PCB](https://ruthvik-reddy-a.github.io/#project/pcb-led-torch) | Pcb | [View / download](../downloads/projects/pcb/Project-30-pcb-led-torch.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/LED%20Torch) |
 | [Emergency-vehicle traffic signal prototype](https://ruthvik-reddy-a.github.io/#project/traffic-priority) | Embedded | [View / download](../downloads/projects/embedded/Project-14-traffic-priority.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/Emergency-vehicle-traffic-clearing-system-using-LABVIEW-and-Arduino) |
 | [8051 gas-leak detection & alerting](https://ruthvik-reddy-a.github.io/#project/gas-detection) | Embedded | [View / download](../downloads/projects/embedded/Project-15-gas-detection.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/LPG-Gas-leakage-detector-using-8051-Microcontroller) |
 | [IoT energy-billing demonstrator](https://ruthvik-reddy-a.github.io/#project/smart-grid) | Embedded | [View / download](../downloads/projects/embedded/Project-16-smart-grid.pdf) | [Repository](https://github.com/Ruthvik-reddy-A/IoT-Based-Smart-grid-along-with-auto-billing-) |

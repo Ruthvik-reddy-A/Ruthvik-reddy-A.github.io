@@ -1,8 +1,8 @@
 const categories = {
   all: 'All work', analog: 'Analog IC', digital: 'Digital design',
-  verification: 'Verification', embedded: 'Embedded', power: 'Power', signal: 'Signals & studies'
+  verification: 'Verification', pcb: 'PCB design', embedded: 'Embedded', power: 'Power', signal: 'Signals & studies'
 };
-const symbols = { analog: '∿', digital: '▦', verification: '⌁', embedded: '⊞', power: '↯', signal: '≋' };
+const symbols = { pcb: '▧', analog: '∿', digital: '▦', verification: '⌁', embedded: '⊞', power: '↯', signal: '≋' };
 let activeFilter = 'all';
 let libraryScroll = 0;
 let lastRoute = '';

@@ -1260,6 +1260,356 @@ const projects = [
     "detailedPdf": "downloads/projects/power/Project-13-buck-converter.pdf"
   },
   {
+    "id": "pcb-datalogger",
+    "title": "ATmega328P data-logger PCB",
+    "summary": "Integrated an ATmega328P, two external EEPROM devices, and a real-time clock into a four-copper-layer KiCad board, with Gerber exports available in the repository.",
+    "question": "How can a data-logger board bring processing, persistent storage, timekeeping, and accessible interfaces together?",
+    "situation": "The board design provides the hardware foundation for a standalone data logger. The checked-in schematic identifies an ATmega328P-AU, two 24LC1025 devices, a DS1337S clock, and dedicated clock sources.",
+    "task": "Develop the schematic and PCB layout for the processor, external memory, clock, and connector interfaces.",
+    "approach": [
+      "Organized the controller around a 16 MHz clock and the RTC around a 32.768 kHz crystal. Included memory devices, pull-up resistors, decoupling, and connector sheets in the KiCad project.",
+      "Placed and routed the design in the checked-in four-copper-layer board. The source contains 29 footprints, including mounting features, with 274 track segments and 48 vias.",
+      "Included two-layer and four-layer Gerber export directories alongside a component list. The current editable board uses four copper layers; the older exports are retained as separate artifacts."
+    ],
+    "results": [
+      [
+        "Current board",
+        "4 copper layers"
+      ],
+      [
+        "Controller",
+        "ATmega328P-AU"
+      ],
+      [
+        "External memory devices",
+        "2 × 24LC1025"
+      ]
+    ],
+    "validation": "The repository provides editable schematic and board files, front/back renders, a component list, and Gerber exports. The design files establish a concrete hardware implementation, while operational data logging still requires firmware and bench evidence.",
+    "tradeoff": "The README’s 512 KB capacity and two-layer description do not match the current schematic and board. The portfolio uses the device part numbers and current layer count instead. Sampling rate, endurance, logging firmware, and successful hardware operation are not demonstrated by the reviewed files.",
+    "tags": [
+      "KiCad",
+      "PCB layout",
+      "ATmega328P",
+      "I²C interfaces",
+      "Gerber outputs"
+    ],
+    "category": "pcb",
+    "label": "PCB & board design",
+    "term": "Personal project",
+    "course": "Independent hardware design · KiCad",
+    "kind": "PCB design study",
+    "role": "Schematic capture, PCB implementation, and design documentation in the linked personal GitHub project.",
+    "outcome": "Integrated an ATmega328P, two external EEPROM devices, and a real-time clock into a four-copper-layer KiCad board, with Gerber exports available in the repository.",
+    "flow": [
+      "Circuit capture",
+      "Footprint placement",
+      "PCB routing",
+      "Design documentation"
+    ],
+    "repository": "https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/MCU-Datalogger-With-Built-In-512K-EEPROM",
+    "source": "PCB-design-projects GitHub repository: MCU-Datalogger-With-Built-In-512K-EEPROM; README, KiCad schematic/board, and repository previews. Reviewed 11 November 2026.",
+    "images": [
+      {
+        "src": "assets/images/img-pcb-datalogger-0.webp",
+        "title": "Data-logger board render",
+        "caption": "Repository front-side 3D render showing the controller, memory, clock, and connectors.",
+        "alt": "Data-logger board render — Repository front-side 3D render showing the controller, memory, clock, and connectors.",
+        "width": 816,
+        "height": 519
+      },
+      {
+        "src": "assets/images/img-pcb-datalogger-1.webp",
+        "title": "Data-logger reverse-side render",
+        "caption": "Repository reverse-side 3D render; this is a design visualization, not a fabricated-board photograph.",
+        "alt": "Data-logger reverse-side render — Repository reverse-side 3D render; this is a design visualization, not a fabricated-board photograph.",
+        "width": 1090,
+        "height": 674
+      }
+    ],
+    "detailedPdf": "downloads/projects/pcb/Project-26-pcb-datalogger.pdf"
+  },
+  {
+    "id": "pcb-gps-gsm",
+    "title": "ESP32 GPS/GSM tracker PCB",
+    "summary": "Integrated GPS, GSM, EEPROM, charging, and boost-converter sheets around an ESP32-S3 in a four-copper-layer KiCad tracker design.",
+    "question": "How can a tracking board combine location, communication, local storage, and battery power?",
+    "situation": "The tracker architecture brings several interfaces and power blocks onto one board. The schematic identifies an ESP32-S3-WROOM-1, NEO-8Q GPS module, SIM800C modem, and CAT24C256 EEPROM.",
+    "task": "Organize the multi-sheet hardware design and board layout for the tracker and its power-management blocks.",
+    "approach": [
+      "Separated GPS, GSM, connectors, charging, and boost circuitry into schematic sheets. The design includes TXS0108E level translation, TP4056 charging, and an MT3608 boost stage.",
+      "Integrated the controller, local memory, external-module interfaces, and connectors in the PCB. The checked-in board contains four copper layers, 61 footprints, 770 track segments, and 84 vias.",
+      "Documented the architecture and supplied a 3D board preview. Used the source files to distinguish intended tracking functionality from measured operation."
+    ],
+    "results": [
+      [
+        "Current board",
+        "4 copper layers"
+      ],
+      [
+        "Controller",
+        "ESP32-S3-WROOM-1"
+      ],
+      [
+        "Position / cellular modules",
+        "NEO-8Q / SIM800C"
+      ]
+    ],
+    "validation": "The repository contains a multi-sheet schematic, routed board data, and a board render for the integrated tracker. These demonstrate the hardware-design work; no firmware logs, GPS-fix results, or cellular transmission measurements were found in the reviewed material.",
+    "tradeoff": "The schematic labels a regulator AMS1117-5.0 while the associated output net is labelled 3.3 V. This discrepancy needs resolution before assembly or power-up. No RF performance, impedance-control, battery-life, DRC-pass, or SI/PI sign-off claim is made.",
+    "tags": [
+      "KiCad",
+      "Multilayer PCB layout",
+      "ESP32 hardware",
+      "UART interfaces",
+      "Power integration"
+    ],
+    "category": "pcb",
+    "label": "PCB & board design",
+    "term": "Personal project",
+    "course": "Independent hardware design · KiCad",
+    "kind": "PCB design study",
+    "role": "Schematic capture, PCB implementation, and design documentation in the linked personal GitHub project.",
+    "outcome": "Integrated GPS, GSM, EEPROM, charging, and boost-converter sheets around an ESP32-S3 in a four-copper-layer KiCad tracker design.",
+    "flow": [
+      "Circuit capture",
+      "Footprint placement",
+      "PCB routing",
+      "Design documentation"
+    ],
+    "repository": "https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/GPS%20%2B%20GSM%20Tracker%20with%20EEPROM%20Logging",
+    "source": "PCB-design-projects GitHub repository: GPS + GSM Tracker with EEPROM Logging; README, KiCad schematic/board, and repository previews. Reviewed 11 November 2026.",
+    "images": [
+      {
+        "src": "assets/images/img-pcb-gps-gsm-0.webp",
+        "title": "Tracker board render",
+        "caption": "Repository 3D render of the tracker board and battery holder.",
+        "alt": "Tracker board render — Repository 3D render of the tracker board and battery holder.",
+        "width": 957,
+        "height": 747
+      },
+      {
+        "src": "assets/images/img-pcb-gps-gsm-1.webp",
+        "title": "Tracker top-level schematic",
+        "caption": "Repository architecture view linking controller, storage, power, GPS, and GSM sheets.",
+        "alt": "Tracker top-level schematic — Repository architecture view linking controller, storage, power, GPS, and GSM sheets.",
+        "width": 1077,
+        "height": 791
+      }
+    ],
+    "detailedPdf": "downloads/projects/pcb/Project-27-pcb-gps-gsm.pdf"
+  },
+  {
+    "id": "pcb-breadboard-supply",
+    "title": "Breadboard power-supply PCB",
+    "summary": "Created a KiCad breadboard-supply design with LM7805 and LM317 regulator stages, selectable output headers, and a two-copper-layer board.",
+    "question": "How can a compact supply board make regulated power and selectable rails accessible for prototyping?",
+    "situation": "The project organizes input power, regulation, switching, indication, and output connectors into a breadboard-oriented module. The schematic labels 5 V and 3.3 V output rails.",
+    "task": "Translate the supply circuit into a board with accessible switches, connectors, and regulator placement.",
+    "approach": [
+      "Built separate schematic sections for the input/5 V path, adjustable-regulator path, and output selection. The actual parts are LM7805_TO220 and LM317_TO-220.",
+      "Included input/output capacitors, an LED, switching, and pin/terminal connectors. Retained the schematic’s labelled output voltages as design intent, not measured regulation results.",
+      "Implemented the source board with two copper layers, 18 footprints, 63 track segments, and one via, and documented the assembly appearance using a 3D render."
+    ],
+    "results": [
+      [
+        "Current board",
+        "2 copper layers"
+      ],
+      [
+        "Regulators in source",
+        "LM7805 + LM317"
+      ],
+      [
+        "Labelled output rails",
+        "5 V / 3.3 V"
+      ]
+    ],
+    "validation": "The editable schematic, board file, and matching render show the regulator and connector implementation. The reviewed repository does not provide a load sweep, ripple measurements, or thermal characterization.",
+    "tradeoff": "The README mentions AMS1117 and USB options, whereas the checked-in schematic uses LM7805/LM317 and a barrel-jack input. Output-voltage labels describe intended rails; regulator configuration and loaded behavior require bench verification.",
+    "tags": [
+      "KiCad",
+      "PCB layout",
+      "Linear regulators",
+      "Power distribution",
+      "Connector integration"
+    ],
+    "category": "pcb",
+    "label": "PCB & board design",
+    "term": "Personal project",
+    "course": "Independent hardware design · KiCad",
+    "kind": "PCB design study",
+    "role": "Schematic capture, PCB implementation, and design documentation in the linked personal GitHub project.",
+    "outcome": "Created a KiCad breadboard-supply design with LM7805 and LM317 regulator stages, selectable output headers, and a two-copper-layer board.",
+    "flow": [
+      "Circuit capture",
+      "Footprint placement",
+      "PCB routing",
+      "Design documentation"
+    ],
+    "repository": "https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/Breadboard-Power-Supply",
+    "source": "PCB-design-projects GitHub repository: Breadboard-Power-Supply; README, KiCad schematic/board, and repository previews. Reviewed 11 November 2026.",
+    "images": [
+      {
+        "src": "assets/images/img-pcb-breadboard-supply-0.webp",
+        "title": "Breadboard-supply board render",
+        "caption": "Repository 3D render showing regulators, switches, and connectors.",
+        "alt": "Breadboard-supply board render — Repository 3D render showing regulators, switches, and connectors.",
+        "width": 876,
+        "height": 493
+      },
+      {
+        "src": "assets/images/img-pcb-breadboard-supply-1.webp",
+        "title": "Regulation and output-selection schematic",
+        "caption": "Repository schematic with input, regulator, and selectable-output sections.",
+        "alt": "Regulation and output-selection schematic — Repository schematic with input, regulator, and selectable-output sections.",
+        "width": 1154,
+        "height": 783
+      }
+    ],
+    "detailedPdf": "downloads/projects/pcb/Project-28-pcb-breadboard-supply.pdf"
+  },
+  {
+    "id": "pcb-solar-supply",
+    "title": "Tiny solar-supply PCB adaptation",
+    "summary": "Adapted a documented Elektor solar-supply circuit into a KiCad PCB using an AP3015 boost stage, Schottky diodes, and MOSFET-controlled shutdown.",
+    "question": "How can a small solar-supply circuit be organized into a compact board with charging and shutdown paths?",
+    "situation": "The project README credits the Elektor Tiny Solar Supply article by Clemens Valens. The design targets a NiMH-cell solar supply with a nominal 3.3 V output, and the KiCad schematic uses an AP3015KTR-G1 controller.",
+    "task": "Adapt the referenced circuit into a schematic and PCB with battery, solar, control, and output connections.",
+    "approach": [
+      "Implemented the boost-converter network, SS14 Schottky diodes, feedback components, and a 2N7000 shutdown-control device in the source schematic.",
+      "Organized the external connections and component placement into a two-copper-layer board. The current PCB contains 16 footprints, 85 track segments, and four vias.",
+      "Documented the schematic and board render while preserving the original circuit attribution. Described the nominal output and daylight shutdown as intended behavior, pending measurement."
+    ],
+    "results": [
+      [
+        "Current board",
+        "2 copper layers"
+      ],
+      [
+        "Boost controller",
+        "AP3015KTR-G1"
+      ],
+      [
+        "Nominal output intent",
+        "3.3 V"
+      ]
+    ],
+    "validation": "The repository contains an editable KiCad schematic and board, plus schematic and 3D previews. This supports a PCB adaptation case study; it does not establish output-current capability, charging performance, or conversion efficiency.",
+    "tradeoff": "The circuit is an attributed adaptation. The collection overview’s Li-ion/TP4056 description conflicts with this project’s NiMH/AP3015 files and is not used. MPPT, measured efficiency, and a validated battery-charging profile are not claimed.",
+    "tags": [
+      "KiCad",
+      "PCB layout",
+      "Boost-converter circuits",
+      "Solar power circuits",
+      "Schematic capture"
+    ],
+    "category": "pcb",
+    "label": "PCB & board design",
+    "term": "Personal project",
+    "course": "Independent hardware design · KiCad",
+    "kind": "PCB design study",
+    "role": "KiCad schematic and PCB adaptation of the Elektor Tiny Solar Supply circuit, credited in the project README to Clemens Valens.",
+    "outcome": "Adapted a documented Elektor solar-supply circuit into a KiCad PCB using an AP3015 boost stage, Schottky diodes, and MOSFET-controlled shutdown.",
+    "flow": [
+      "Circuit capture",
+      "Footprint placement",
+      "PCB routing",
+      "Design documentation"
+    ],
+    "repository": "https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/Tiny-Solar-Power-Supply",
+    "source": "PCB-design-projects GitHub repository: Tiny-Solar-Power-Supply; README, KiCad schematic/board, and repository previews. Reviewed 11 November 2026.",
+    "images": [
+      {
+        "src": "assets/images/img-pcb-solar-supply-0.webp",
+        "title": "Solar-supply board render",
+        "caption": "Repository 3D render of the adapted supply board.",
+        "alt": "Solar-supply board render — Repository 3D render of the adapted supply board.",
+        "width": 1024,
+        "height": 521
+      },
+      {
+        "src": "assets/images/img-pcb-solar-supply-1.webp",
+        "title": "Solar-supply schematic",
+        "caption": "Repository schematic of the AP3015-based circuit; original concept credited to Elektor / Clemens Valens.",
+        "alt": "Solar-supply schematic — Repository schematic of the AP3015-based circuit; original concept credited to Elektor / Clemens Valens.",
+        "width": 1793,
+        "height": 794
+      }
+    ],
+    "detailedPdf": "downloads/projects/pcb/Project-29-pcb-solar-supply.pdf"
+  },
+  {
+    "id": "pcb-led-torch",
+    "title": "Battery-powered LED torch PCB",
+    "summary": "Created a compact LED torch board with a battery holder, switch, resistor, and LED, and included Gerber and drill outputs for the design.",
+    "question": "How can a simple LED circuit become a compact, mechanically coherent PCB?",
+    "situation": "This introductory hardware project uses a direct battery-switch-resistor-LED circuit. Its board outline and component arrangement follow the battery holder and accessible switch.",
+    "task": "Capture the circuit, assign footprints, route the compact board, and prepare manufacturing-output files.",
+    "approach": [
+      "Captured the battery, switch, resistor, and LED path in KiCad. The source schematic uses a resistor-labelled R1 rather than a specified current-setting value.",
+      "Arranged the battery holder, LED, resistor, and switch within the shaped board. The file contains two copper layers, five footprints including a mounting feature, 14 track segments, and no vias.",
+      "Provided front/back copper, silkscreen, mask, edge-cut, and drill exports in the Gerber directory, alongside a board render and schematic preview."
+    ],
+    "results": [
+      [
+        "Board file",
+        "2 copper layers"
+      ],
+      [
+        "Routing vias",
+        "0"
+      ],
+      [
+        "Available outputs",
+        "Gerber + drill"
+      ]
+    ],
+    "validation": "The repository includes the editable circuit and board, a 3D preview, and manufacturing-output files. The schematic supports a direct resistive LED circuit, not the generic transistor/boost alternatives described in the README.",
+    "tradeoff": "R1 has no numeric value in the checked-in schematic. LED current, brightness, battery runtime, fabrication, and bench operation are therefore not claimed. Gerber availability does not by itself establish manufacturing readiness.",
+    "tags": [
+      "KiCad",
+      "Schematic capture",
+      "PCB layout",
+      "LED circuits",
+      "Gerber outputs"
+    ],
+    "category": "pcb",
+    "label": "PCB & board design",
+    "term": "Personal project",
+    "course": "Independent hardware design · KiCad",
+    "kind": "PCB design study",
+    "role": "Schematic capture, PCB implementation, and design documentation in the linked personal GitHub project.",
+    "outcome": "Created a compact LED torch board with a battery holder, switch, resistor, and LED, and included Gerber and drill outputs for the design.",
+    "flow": [
+      "Circuit capture",
+      "Footprint placement",
+      "PCB routing",
+      "Design documentation"
+    ],
+    "repository": "https://github.com/Ruthvik-reddy-A/PCB-design-projects/tree/main/LED%20Torch",
+    "source": "PCB-design-projects GitHub repository: LED Torch; README, KiCad schematic/board, and repository previews. Reviewed 11 November 2026.",
+    "images": [
+      {
+        "src": "assets/images/img-pcb-led-torch-0.webp",
+        "title": "LED torch board render",
+        "caption": "Repository 3D render showing the battery holder, LED, switch, and resistor.",
+        "alt": "LED torch board render — Repository 3D render showing the battery holder, LED, switch, and resistor.",
+        "width": 886,
+        "height": 373
+      },
+      {
+        "src": "assets/images/img-pcb-led-torch-1.webp",
+        "title": "LED torch schematic",
+        "caption": "Repository schematic of the direct battery-powered LED circuit.",
+        "alt": "LED torch schematic — Repository schematic of the direct battery-powered LED circuit.",
+        "width": 984,
+        "height": 707
+      }
+    ],
+    "detailedPdf": "downloads/projects/pcb/Project-30-pcb-led-torch.pdf"
+  },
+  {
     "id": "traffic-priority",
     "title": "Emergency-vehicle traffic signal prototype",
     "category": "embedded",
